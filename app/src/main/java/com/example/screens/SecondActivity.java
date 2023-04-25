@@ -1,5 +1,6 @@
 package com.example.screens;
 
+
 import android.app.Activity;
 
 import android.content.Intent;
@@ -27,11 +28,7 @@ public class SecondActivity extends Activity {
 
             namnRespons.setText("Ditt namn: " + name);
             emailRespons.setText("Din mail: " + email);
-            // Do something with the name and number
         }
-
-
-
     }
 }
 
