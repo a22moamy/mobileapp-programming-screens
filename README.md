@@ -1,10 +1,10 @@
 
 # Rapport
 
-The app got its second activity by adding another <activity>-element into the 
+The app got its second activity by adding another <activity> element into the 
 AndroidManifest file. This element contains attributes regarding its name (.SecondActivity) 
 and its parent element (.MainActivity). In this app, SecondActivity is only supposed to be reached by interacting with MainActivity, 
-that is why the latter is considered to be a parent. The code for this element can be seen below. 
+that is why the latter is a parent. The code for this element can be seen below. 
 
 ```
         <activity android:name=".SecondActivity"
@@ -12,11 +12,11 @@ that is why the latter is considered to be a parent. The code for this element c
         </activity>
 ```
 
-Aside from creating an activity element, two new files are created: a layout-file 
-(activity_second.xml) and a java-file (SecondActivity.java). These files are connected via the
-"tools:context"-attribute in the xml-file and setContentView() in the java-file. 
+Aside from creating an activity element, two new files are created: a layout file 
+(activity_second.xml) and a java file (SecondActivity.java). These files are connected via the
+"tools:context" attribute in the xml file and setContentView() in the java file. 
 
-Views for both activities are created in their own separate layout-files. The first activity 
+Views for both activities are created in their own separate layout files. The first activity 
 (.MainActivity) gets two EditTextViews and one button. The idea is that the user is supposed to 
 write a name and an email in the two EditTextViews, which is later sent to the second activity by 
 clicking the button. The second activity only consists of TextViews to display the user data.
@@ -77,7 +77,7 @@ Note that the screenshot from SecondActivity shows different text content than w
 in the xml code. To achieve this, there must first be an OnClickListener on the button that takes 
 the user from MainActivity to SecondActivity. Within the OnClickListener a new intent is created.
 The intent specifies that there is an intention to package data from MainActivity and send it over 
-to SecondActivity. Two objects are created to represent the editTextViews from the layout-file. 
+to SecondActivity. Two objects are created to represent the editTextViews from the layout file. 
 The value of these views, which is written by the user, gets sent over to SecondActivity with 
 putExtra(). Lastly it is specified that clicking the button shall start SecondActivity, bringing 
 the user from one screen to another. The described code can be seen below. 
@@ -126,3 +126,10 @@ Code for this is shown below.
         }
     }
 ```
+
+With this implemented, the text in SecondActivity will be based on user input. Screenshot 
+examples of user input can be seen below: 
+![img_2.png](img_2.png)
+
+![img_3.png](img_3.png)
+
