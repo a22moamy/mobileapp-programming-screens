@@ -25,8 +25,8 @@ public class SecondActivity extends Activity {
             String name = extras.getString("name");
             String email = extras.getString("email");
 
-            namnRespons.setText(name);
-            emailRespons.setText(email);
+            namnRespons.setText("Ditt namn: " + name);
+            emailRespons.setText("Din mail: " + email);
             // Do something with the name and number
         }
 
