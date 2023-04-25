@@ -2,7 +2,9 @@ package com.example.screens;
 
 import android.app.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 
@@ -13,13 +15,17 @@ public class SecondActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        TextView namn = findViewById(R.id.namnRespons);
 
-        TextView email = findViewById(R.id.emailRespons);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            String name = extras.getString("name");
+            String email = extras.getString("email");
 
-        namn.setText("Heyyy");
+            Log.d("SecondActivity", name);
+            // Do something with the name and number
+        }
 
-        email.setText("Hello everyone");
+
 
     }
 }

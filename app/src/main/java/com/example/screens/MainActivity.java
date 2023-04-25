@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,8 +23,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+
+                EditText namn = findViewById(R.id.editTextTextPersonName);
+
+                EditText email = findViewById(R.id.editTextTextEmailAddress);
+
+                intent.putExtra("name", namn.getText().toString());
+                intent.putExtra("email", email.getText().toString());
                 startActivity(intent);
-                Log.d("TAG", "hej heeejjj");
+
             }
         });
     }
