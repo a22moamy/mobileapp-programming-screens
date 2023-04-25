@@ -7,12 +7,35 @@
     tools:context=".SecondActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/paragraph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yippie"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/namnRespons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.568" />
+
+    <TextView
+        android:id="@+id/emailRespons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/yippie"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/namnRespons"
+        app:layout_constraintVertical_bias="0.266" />
+
+    <TextView
+        android:id="@+id/namnRespons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yippie"
+        app:layout_constraintTop_toBottomOf="@id/paragraph"
+        app:layout_constraintBottom_toTopOf="@id/emailRespons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
